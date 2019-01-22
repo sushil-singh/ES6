@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <body>
+        <script>
+			const planetsOrderFromSun = new Set();
+			planetsOrderFromSun.add('Mercury');
+			planetsOrderFromSun.add('Venus').add('Earth').add('Mars'); // Chainable Method
+			console.log(planetsOrderFromSun.has('Earth')); // True
+
+			planetsOrderFromSun.delete('Mars');
+			console.log(planetsOrderFromSun.has('Mars')); // False
+
+			for (const x of planetsOrderFromSun) {
+			  console.log(x); // Same order in as out - Mercury Venus Earth
+			}
+			console.log(planetsOrderFromSun.size); // 3
+
+			planetsOrderFromSun.add('Venus'); // Trying to add a duplicate
+			console.log(planetsOrderFromSun.size); // Still 3, Did not add the duplicate
+
+			planetsOrderFromSun.clear();
+			console.log(planetsOrderFromSun.size); // 0
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <body>
+        <script>
+			//sum is the function name
+//x and y are function parameters
+var sum = (x, y) => x + y;
+
+console.log(sum(2, 900)); //902
+//----------------------------lambda multi lines
+var sum = (x, y) => {
+    x = x + 10;
+    y = y + 10;
+    return x + y;
+}
+
+console.log(sum(10, 10)); //40
+//----------------------------
+function sum(p, q)
+{
+    console.log(p() + q()); //87
+}
+
+sum(a => 20 + 10, b => 1 + 56); //here we are passing two function objects
+
+//----------------------------
+window.age = 12;
+
+function Person(){
+  this.age = 34;
+
+  setTimeout(() => {
+    console.log(this.age); //34
+  }, 1000);
+
+  setTimeout(function(){
+    console.log(this.age); //12
+  }, 1000);  
+}
+
+var p = new Person();
+        </script>
+    </body>
+</html>

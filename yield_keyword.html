@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <body>
+        <script>
+			function collection_name()
+			{
+				return [1, 3, 5, 7];
+			}
+
+			var collection = collection_name();
+
+			for(var iii = 0; iii < collection.length; iii++)
+			{
+				console.log(collection[iii]);
+			}
+
+
+			function* collection_name()
+			{
+				yield 1;
+				yield 3;
+				yield 5;
+				yield 7;
+			}
+
+			for(var iii  of collection_name())
+			{
+				console.log(iii);
+			}
+        </script>
+    </body>
+</html>

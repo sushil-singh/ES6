@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <body>
+        <script>
+		class baseModel {
+		  constructor(options = {}, data = []) { // class constructor
+			this.name = 'Base'
+			this.url = 'http://someurl.com'
+			this.data = data
+			this.options = options
+		  }
+
+			getName() { // class method
+			  console.log(`Class name: ${this.name}`)
+			}
+		}
+		
+		obj = new baseModel();
+		obj.getName();
+        </script>
+    </body>
+</html>

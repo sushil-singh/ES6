@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <body>
+        <script>
+			function* range(start, count) {
+				for (let delta = 0; delta < count; delta++) {
+					yield start + delta;
+				}
+			}
+
+			for (let teenageYear of range(13, 7)) {
+				//template literals back quotes used below
+				console.log(`Next Age ${teenageYear}!`);
+			}
+        </script>
+    </body>
+</html>

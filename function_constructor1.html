@@ -1,0 +1,20 @@
+<html>
+<body>
+<script>
+
+function product() 
+{ 
+var result; 
+
+/* Used to dynamically create a functions */
+var func = new Function("x", "y", document.getElementById("txt").value); 
+
+result = func(10,20); 
+console.log("The product : "+result); 
+}
+</script>
+Enter javaScript code:<input type="text" id="txt" value="" /><br>
+<input type="button" value="Invoke" onclick="product();"/>
+
+</body>
+</html>

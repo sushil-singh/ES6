@@ -1,0 +1,38 @@
+<html>
+<body>
+<script>
+//yield is keyword in JavaScript
+function *foo() {
+    yield 1;
+    yield 2;
+    yield 3;
+    yield 4;
+    yield 5;
+}
+
+for(x of foo()) {
+  console.log(x);
+}
+/*NOTE: Generators advantage that you don't need to store infinite numbers in memory to iterate over them.
+An iterator traverses a collection one at a time.
+
+A generator generates a sequence, one item at a time.
+*/
+/*
+function* stringIter() {  
+    var str = "thisistotest";  
+    var idx = 0;  
+    while(idx < str.length)  
+        yield str[idx++];  
+}  
+
+var si = stringIter();  
+
+console.log(si.next().value);  
+console.log(si.next().value);  
+console.log(si.next().value);  
+*/
+
+</script>
+</body>
+</html>

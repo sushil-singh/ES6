@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+	var y = 50;
+	metv(y);
+	console.log("y="+y);
+	
+	oarr = ['bbbbb','cccc','ddddddd','eeeee'];
+	
+	metr(oarr);
+	
+	console.log(oarr);
+	
+	obj = {nam1:'val1', nam2:'val2'};
+	metr(obj);
+	console.log(obj.nam1);
+
+    function metv(x)//call by value
+    {
+		x = 20;
+    }
+	
+	function metr(arr)//call by reference
+	{
+		arr[0] = 'aaaaa';
+	}
+	
+	function metr(pobj)//call by reference
+	{
+		pobj.nam1='kkkkkk';
+	}
+</script>
+</head>
+<body>
+<input type="text" id="val" value="0" />
+<input type="button" onclick="counter();" value="Reset Counter" />
+</body>
+</html>

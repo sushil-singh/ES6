@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <body>
+        <script>
+			var custom_collection = {
+    elements:  [1, 4, 6, 9],
+    size : 3,
+    pointer :0,
+    [Symbol.iterator]:  function(){
+        var e = this.elements;
+        var s = this.size;
+        var p = this.pointer;
+        return{
+            next: function() {
+                if(p > s) 
+                {
+                    return { value: undefined, done: true };
+                } 
+                else 
+                {
+                    p++;
+                    return { value: e[p - 1], done: false };
+                }
+            },
+        };
+    }
+}
+
+for(var i of custom_collection)
+{
+    console.log(i); //1, 4, 6, 9
+}
+        </script>
+    </body>
+</html>

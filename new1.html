@@ -1,0 +1,50 @@
+<html>
+<body>
+<script>
+$traceurRuntime.ModuleStore.getAnonymousModule(function() {
+  "use strict";
+  var Student = function() {
+    function Student(name, age) {
+      this.name = name;
+      this._age = age;
+    }
+    return ($traceurRuntime.createClass)(Student, {
+      getName: function() {
+        return this.name;
+      },
+      setName: function(name) {
+        this.name = name;
+      },
+      set age(value) {
+        this._age = value;
+      },
+      get age() {
+        return this._age;
+      }
+    }, {});
+  }();
+  var Person = function($__super) {
+    function Person(name, age, citizen) {
+      $traceurRuntime.superConstructor(Person).call(this, name, age);
+      this.citizen = citizen;
+    }
+    return ($traceurRuntime.createClass)(Person, {
+      getCitizen: function() {
+        return this.citizen;
+      },
+      getName: function() {
+        return $traceurRuntime.superGet(this, Person.prototype, "getName").call(this);
+      }
+    }, {}, $__super);
+  }(Student);
+  var stud = new Student("Narayan", 21);
+  var p = new Person("Narayan Prusty", 21, "India");
+  stud.age = 12;
+  console.log(stud.age);
+  return {};
+});
+//# sourceURL=traceured.js
+
+</script>
+</body>
+</html>
